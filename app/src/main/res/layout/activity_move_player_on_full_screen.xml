@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.single.MovePlayerOnFullScreenActivity">
+
+    <FrameLayout
+        android:id="@+id/demo_cloud_screen_player_container_view_normal"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/demo_cloud_screen_player_container_view_center"
+            android:layout_width="250dp"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:id="@+id/actions_on_full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/next_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下一集" />
+
+            <Button
+                android:id="@+id/full_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恢复全屏" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/demo_cloud_screen_player_container_view_full"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

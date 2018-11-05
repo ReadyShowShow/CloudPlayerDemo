@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cloud.player">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <application
+        android:name=".CloudPlayerApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:replace="android:allowBackup,android:label,android:supportsRtl">
+        <activity
+            android:name=".activity.single.SampleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:label="Player2 Demo" />
+        <activity
+            android:name=".activity.single.BtnControlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:label="Player2 Demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.AdvanceEffectActivity" />
+        <activity
+            android:name=".activity.single.MovePlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.single.MovePlayerOnFullScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.single.FloatWindowActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.multi.MultiPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.single.ListSinglePlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.single.GravitySensorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout" />
+        <activity
+            android:name=".activity.single.AutoResizeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout" />
+        <activity android:name=".activity.download.DownloadActivity" />
+    </application>
+
+</manifest>
