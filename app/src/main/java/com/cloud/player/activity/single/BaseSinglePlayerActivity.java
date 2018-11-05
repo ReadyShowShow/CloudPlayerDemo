@@ -64,6 +64,11 @@ public abstract class BaseSinglePlayerActivity extends AppCompatActivity {
         player.onWindowFocusChanged(hasFocus);
     }
 
+    /**
+     * 用户点击返回键:
+     * 如果是全屏的话,先竖屏.
+     * 如果是竖屏,则直接finish
+     */
     @Override
     public void onBackPressed() {
         if (player.isFullScreen()) {
