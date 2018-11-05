@@ -12,7 +12,6 @@ import com.youku.cloud.player.YoukuPlayer;
  * @author jian 1210105886@qq.com
  */
 public abstract class BaseSinglePlayerActivity extends AppCompatActivity {
-    public static String TAG = "PlayerBaseActivity";
     protected YoukuPlayer player;
 
     @Override
