@@ -1,1 +1,6 @@
+rootProject.name = '视频云样例'
+
 include ':app'
+
+//include ':CloudPlayerSDK'
+//project(':CloudPlayerSDK').projectDir = file('../CloudPlayerSDK/CloudPlayerSDK')
