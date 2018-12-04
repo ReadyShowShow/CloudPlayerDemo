@@ -20,6 +20,19 @@ dependencies {
 }
 ```
 
+过滤掉多余so文件,控制apk大小为10M左右
+```
+android {
+    ......
+    defaultConfig {
+        ......
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+}
+```
+
 ## 混淆事项
 
 proguard-rules-youku.pro 将此混淆文件加入proguardFiles
