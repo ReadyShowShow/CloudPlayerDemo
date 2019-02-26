@@ -40,5 +40,5 @@ dependencies {
     implementation('com.nostra13.universalimageloader:universal-image-loader:1.9.5')
     implementation('com.squareup.okhttp3:okhttp:3.9.0@jar')
 
-    implementation('com.youku.cloud.player:CloudPlayerSDK:7.0.1@aar')
+    implementation('com.youku.cloud.player:CloudPlayerSDK:7.0.2.1@aar')
 }
