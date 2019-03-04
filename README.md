@@ -16,7 +16,8 @@
 ``` gradle
 dependencies {
     ......
-    implementation('com.youku.cloud.player:CloudPlayerSDK:7.0.1@aar')
+    // 看demo内的版本
+    implementation('com.youku.cloud.player:CloudPlayerSDK:xxx.xxx.xxx@aar')
 }
 ```
 
