@@ -77,6 +77,26 @@ public class SampleActivity extends BaseSinglePlayerNormalActivity {
         private StringBuffer sb = new StringBuffer("L开始输出日志");
 
         @Override
+        public void onPlayerPreparing() {
+            playerStatusEtAppendPlayerLog("onPlayerPreparing");
+        }
+
+        @Override
+        public void onPlayerPrepared() {
+            playerStatusEtAppendPlayerLog("onPlayerPrepared");
+        }
+
+        @Override
+        public void onLoadingStart() {
+            playerStatusEtAppendPlayerLog("onLoadingStart");
+        }
+
+        @Override
+        public void onLoadingEnd() {
+            playerStatusEtAppendPlayerLog("onLoadingEnd");
+        }
+
+        @Override
         public void onAdVideoStart() {
             playerStatusEtAppendPlayerLog("onAdVideoStart");
         }

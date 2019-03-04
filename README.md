@@ -167,6 +167,7 @@ player.playVideo(vId, vPassword, quality);
 
 ### 响应全屏事件, 横竖屏的切换
 
+播放器的容器,可以是任意形状,任意位置.
 播放器本身并没有全屏时的播放容器, 需要指出全屏状态下的播放容器, 如果不指出, 则不会全屏.
 ```java
 public abstract class BaseSinglePlayerNormalActivity extends BaseSinglePlayerActivity {
@@ -221,7 +222,7 @@ public abstract class BaseSinglePlayerNormalActivity extends BaseSinglePlayerAct
 
 ### 其他事件的监听
 
-看PlayerListener类定义, 见名知义, 没啥解释的.
+看PlayerListener类定义, 见名知义.
 
 ```java
 public class SampleActivity extends BaseSinglePlayerNormalActivity {
@@ -231,9 +232,30 @@ public class SampleActivity extends BaseSinglePlayerNormalActivity {
         player.addPlayerListener(new MyPlayerListener());
     }
     private class MyPlayerListener extends PlayerListener {
+        public PlayerListener() {
+        }
+
+        /**
+         * 视频开始加载
+         */
+        public void onLoadingStart() {
+        }
+
+        /**
+         * 视频结束加载
+         */
+        public void onLoadingEnd() {
+        }
+
+        /**
+         * 广告开始
+         */
         public void onAdVideoStart() {
         }
 
+        /**
+         * 广告播完，正片开始播放
+         */
         public void onRealVideoStart() {
         }
 
@@ -243,33 +265,65 @@ public class SampleActivity extends BaseSinglePlayerNormalActivity {
         public void onPlayerPause() {
         }
 
+        /**
+         * 播放器进度更新
+         */
         public void onCurrentPositionChanged(int millisecond) {
         }
 
+        /**
+         * seek完成
+         */
         public void onSeekComplete() {
         }
 
+        /**
+         * 播放完成
+         */
         public void onComplete() {
         }
 
+        /**
+         * 播放器清晰度变化
+         */
         public void onVideoQualityChanged() {
         }
 
+        /**
+         * 获取到视频信息
+         */
         public void onVideoInfoGot(VideoInfo videoInfo) {
         }
 
+        /**
+         * 需要密码
+         *
+         * @param code 0需要密码，1密码错误
+         */
         public void onVideoNeedPassword(int code) {
         }
 
+        /**
+         * 视频原片大小发生变化
+         */
         public void onVideoSizeChanged(int width, int height) {
         }
 
+        /**
+         * 播放器左上角返回键
+         */
         public void onBackButtonPressed() {
         }
 
+        /**
+         * 控制条是否可见
+         */
         public void onControlVisibilityChange(boolean isShow) {
         }
 
+        /**
+         * 是否全屏的切换
+         */
         public void onScreenModeChanged(boolean isFullScreen) {
         }
 
