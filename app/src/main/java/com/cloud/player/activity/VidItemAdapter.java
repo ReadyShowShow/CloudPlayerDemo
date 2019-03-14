@@ -30,20 +30,12 @@ class VidItemAdapter extends BaseAdapter {
             this.vidItems = itemsFromFile;
         } else {
             vidItems = new ArrayList<>();
-            vidItems.add(new VidItem("空", ""));
-            vidItems.add(new VidItem("优酷普通", "XMTM2MDQ5MzUxMg=="));
+            vidItems.add(new VidItem("易车", "XNTgzODA2MTI0"));
             vidItems.add(new VidItem("优酷无水印", "XMTU1MjQ0MTcyOA=="));
+            vidItems.add(new VidItem("优酷4:3", "XMTEyMDIwNDI0"));
             vidItems.add(new VidItem("优酷加密", "XNzU3OTg0NzAw", "123456"));
             vidItems.add(new VidItem("加密可下载", "XNzU0NjE4MDgw", "123456"));
             vidItems.add(new VidItem("私密托管", "XMTc2ODg2Mzk0MA=="));
-            vidItems.add(new VidItem("优酷会员", "XMTc0NDYzNDYwNA=="));
-            vidItems.add(new VidItem("优酷版权", "XMTY5NDg2MzY5Ng=="));
-            vidItems.add(new VidItem("优酷付费", "XMTczOTQ0MzY3Ng=="));
-            vidItems.add(new VidItem("优酷4:3", "XMTEyMDIwNDI0"));
-            vidItems.add(new VidItem("动画", "XMTU4MzkyNDcxMg=="));
-            vidItems.add(new VidItem("易车", "XNTgzODA2MTI0"));
-            vidItems.add(new VidItem("订阅可看", "XMTU0ODY1OTYwOA=="));
-            vidItems.add(new VidItem("mi4无法播放", "XMjY1MTQxMTQyNA=="));
         }
     }
 

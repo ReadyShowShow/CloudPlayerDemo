@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         cIdEt = (EditText) findViewById(R.id.client_id);
         cSecEt = (EditText) findViewById(R.id.client_secret);
 
-        String defaultVid = "XMTgzOTgzODYwMA==";
+        String defaultVid = "XNTgzODA2MTI0";
         vIdEt.setText(defaultVid);
 
         final AppCompatSpinner vidSelector = (AppCompatSpinner) findViewById(R.id.youkuvid);
