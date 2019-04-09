@@ -118,8 +118,8 @@ public class ListSinglePlayerActivity extends BaseSinglePlayerActivity {
             public ImageView videoImage;
 
             public void init(View root) {
-                videoImage = root.findViewById(R.id.list_item_video_image);
-                playerContainer = root.findViewById(R.id.list_item_player_container_view);
+                videoImage = (ImageView) root.findViewById(R.id.list_item_video_image);
+                playerContainer = (ViewGroup) root.findViewById(R.id.list_item_player_container_view);
                 setContainerVisibility(false);
             }
 
