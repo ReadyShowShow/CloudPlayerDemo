@@ -10,7 +10,7 @@ android {
         }
     }
     compileSdkVersion 28
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
         minSdkVersion 17
@@ -35,6 +35,11 @@ android {
             signingConfig signingConfigs.demoTempKey
         }
     }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -50,7 +55,11 @@ dependencies {
     compile('com.alibaba:fastjson:1.2.9')
     compile('com.squareup.okio:okio:1.13.0@jar')
 
-    if (file('../../CloudPlayerSDK/developer').exists()) {
+    if (!fileTree('libs').isEmpty()) {
+        fileTree('libs').each { file ->
+            compile(name: "${file.name.substring(0, file.name.lastIndexOf('.'))}", ext: 'aar')
+        }
+    } else if (file('../../CloudPlayerSDK/developer').exists()) {
         apply from: '../../CloudPlayerSDK/developer'
     } else {
         compile('com.youku.cloud.player:CloudPlayerSDK:7.0.3.1@aar')
