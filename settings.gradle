@@ -1,8 +1,12 @@
+def properties = new Properties()
+properties.load(file('local.properties').newDataInputStream())
+def developer = properties.getProperty("developer")
+
 rootProject.name = '视频云样例'
 
 include ':app'
 
-if (file('../CloudPlayerSDK/developer').exists()) {
+if ("true" == developer && file('../CloudPlayerSDK/developer').exists()) {
     include ':CloudPlayerSDK'
     project(':CloudPlayerSDK').projectDir = file('../CloudPlayerSDK')
 }

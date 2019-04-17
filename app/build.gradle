@@ -55,13 +55,20 @@ dependencies {
     compile('com.alibaba:fastjson:1.2.9')
     compile('com.squareup.okio:okio:1.13.0@jar')
 
+    def properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def developer = properties.getProperty("developer")
+
     if (!fileTree('libs').isEmpty()) {
+        printf("status: aar test")
         fileTree('libs').each { file ->
             compile(name: "${file.name.substring(0, file.name.lastIndexOf('.'))}", ext: 'aar')
         }
-    } else if (file('../../CloudPlayerSDK/developer').exists()) {
+    } else if ("true" == developer && file('../../CloudPlayerSDK/developer').exists()) {
+        printf("status: developer")
         apply from: '../../CloudPlayerSDK/developer'
     } else {
-        compile('com.youku.cloud.player:CloudPlayerSDK:7.1.2@aar')
+        printf("status: aar open")
+        compile('com.youku.cloud.player:CloudPlayerSDK:7.1.2.1@aar')
     }
 }
