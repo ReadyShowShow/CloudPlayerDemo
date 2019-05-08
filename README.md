@@ -28,6 +28,7 @@ android {
     defaultConfig {
         ......
         ndk {
+            // 如果armeabi-v7a不满足开发, 可以自行反编译aar, 或者反编译apk, 将armeabi-v7a下的so文件, 复制一份到其他版本目录下, 比如armeabi
             abiFilters "armeabi-v7a"
         }
     }
