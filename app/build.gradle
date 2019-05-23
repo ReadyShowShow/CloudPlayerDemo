@@ -60,16 +60,11 @@ dependencies {
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
     def developer = properties.getProperty("developer")
 
-    if (!fileTree('libs').isEmpty()) {
-        printf("status: aar test")
-        fileTree('libs').each { file ->
-            compile(name: "${file.name.substring(0, file.name.lastIndexOf('.'))}", ext: 'aar')
-        }
-    } else if ("true" == developer && file('../../CloudPlayerSDK/developer').exists()) {
+    if ("true" == developer && file('../../CloudPlayerSDK/developer').exists()) {
         printf("status: developer")
         apply from: '../../CloudPlayerSDK/developer'
     } else {
         printf("status: aar open")
-        compile('com.youku.cloud.player:CloudPlayerSDK:7.1.2.3@aar')
+        compile('com.youku.cloud.player:CloudPlayerSDK:7.1.2.4@aar')
     }
 }
