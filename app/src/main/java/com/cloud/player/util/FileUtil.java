@@ -23,12 +23,10 @@ public final class FileUtil {
                 while ((line = reader.readLine()) != null) {
                     sb.append(line).append("\n");
                 }
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception ignore) {
             }
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
+            reader.close();
+        } catch (Exception ignore) {
         }
         return sb.toString();
     }
