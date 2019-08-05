@@ -53,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("vId", vIdEt.getText().toString().trim());
         i.putExtra("vPassword", vPasswordEt.getText().toString().trim());
 
-        YoukuProfile.CLIENT_ID = cIdEt.getText().toString().trim();
-        YoukuProfile.CLIENT_SECRET = cSecEt.getText().toString().trim();
+        String clientId = cIdEt.getText().toString().trim();
+        String clientSecret = cSecEt.getText().toString().trim();
+        YoukuProfile.config(clientId, clientSecret);
         startActivity(i);
     }
 
