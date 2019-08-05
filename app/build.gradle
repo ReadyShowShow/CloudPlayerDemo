@@ -65,6 +65,6 @@ dependencies {
         apply from: '../../CloudPlayerSDK/developer'
     } else {
         printf("status: aar open")
-        compile('com.youku.cloud.player:CloudPlayerSDK:7.1.2.4@aar')
+        compile('com.youku.cloud.player:CloudPlayerSDK:7.1.2.8@aar')
     }
 }
