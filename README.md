@@ -54,8 +54,7 @@ public class CloudPlayerApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         new PlayerApplication(this).init();
-        YoukuProfile.CLIENT_ID = 你申请的CLIENT_ID;
-        YoukuProfile.CLIENT_SECRET = 你申请的CLIENT_SECRET;
+        YoukuProfile.config(你申请的CLIENT_ID, 你申请的CLIENT_SECRET);
     }
 }
 ```
