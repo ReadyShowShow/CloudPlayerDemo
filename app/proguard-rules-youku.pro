@@ -18,9 +18,9 @@
     public static ** valueOf(java.lang.String);
 }
 
--keep @com.youku.kubus.NoProguard class * {*;} 
--keep,allowobfuscation @interface com.youku.kubus.NoProguard 
--keepclassmembers class * {  com.youku.kubus.NoProguard *;  } 
+-keep @com.youku.kubus.NoProguard class * {*;}
+-keep,allowobfuscation @interface com.youku.kubus.NoProguard
+-keepclassmembers class * {  com.youku.kubus.NoProguard *; }
 -keepattributes *Annotation* 
 -keepclassmembers class ** { @com.youku.kubus.Subscribe public <methods>; }
 
